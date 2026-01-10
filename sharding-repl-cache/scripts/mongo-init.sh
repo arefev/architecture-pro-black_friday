@@ -2,6 +2,9 @@
 
 ###
 
+echo -e "\n\n---Создание кластера кеширования---\n";
+docker compose exec -T redis_1 bash -c "echo \"yes\" | redis-cli --cluster create   173.17.0.2:6379   173.17.0.3:6379   173.17.0.4:6379   173.17.0.5:6379   173.17.0.6:6379   173.17.0.15:6379   --cluster-replicas 1"
+
 echo -e "\n---Инициализация сервера конфигурации---\n";
 docker compose exec -T configSrv mongosh --port 27017 --quiet <<EOF
 rs.initiate(

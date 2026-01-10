@@ -1,4 +1,4 @@
-# mongo-sharding-repl
+# sharding-repl-cache
 
 ## Как запустить
 
@@ -8,7 +8,7 @@
 docker compose up -d
 ```
 
-Инициализируем сервер конфигурации, шарды, реплики и роутер, а так же заполняем mongodb данными
+Инициализируем сервер конфигурации, шарды, реплики и роутер, кластер редиса, а так же заполняем mongodb данными
 
 ```shell
 ./scripts/mongo-init.sh
@@ -22,6 +22,12 @@ docker compose up -d
 
 ```shell
 ./scripts/show-counter.sh
+```
+
+Проверяем ноды редиса
+
+```shell
+./scripts/show-redis-cluster.sh
 ```
 
 ### Если вы запускаете проект на локальной машине
