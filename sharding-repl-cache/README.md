@@ -1,4 +1,4 @@
-# pymongo-api
+# sharding-repl-cache
 
 ## Как запустить
 
@@ -8,13 +8,27 @@
 docker compose up -d
 ```
 
-Заполняем mongodb данными
+Инициализируем сервер конфигурации, шарды, реплики и роутер, кластер редиса, а так же заполняем mongodb данными
 
 ```shell
 ./scripts/mongo-init.sh
 ```
 
 ## Как проверить
+
+### Через docker compose
+
+Проверяем общее кол-во элементов и кол-во элементов в каждом шарде
+
+```shell
+./scripts/show-counter.sh
+```
+
+Проверяем ноды редиса
+
+```shell
+./scripts/show-redis-cluster.sh
+```
 
 ### Если вы запускаете проект на локальной машине
 
@@ -36,8 +50,4 @@ curl --silent http://ifconfig.me
 
 ## Схема
 
-[Итоговая схема](./schemas/schema_5.drawio)
-
-## Задания 7-10
-
-[Задания 7-10](./task-7-10.pdf)
+[Итоговая схема](../schemas/schema_5.drawio)
