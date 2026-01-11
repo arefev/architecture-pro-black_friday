@@ -37,3 +37,7 @@ curl --silent http://ifconfig.me
 ## Схема
 
 [Итоговая схема](./schemas/schema_5.drawio)
+
+## Задания 7-10
+
+[Задания 7-10](./task-7-10.pdf)
